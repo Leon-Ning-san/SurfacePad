@@ -1,0 +1,38 @@
+<UserControl x:Class="StardewSurfacePad.Controls.SwitchDPad"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Width="148"
+             Height="148"
+             IsManipulationEnabled="False">
+    <Grid x:Name="RootGrid" Background="Transparent">
+        <!-- Subtle circular halo behind the cross D-pad for reliable edge-touch -->
+        <Ellipse Fill="#22000000" IsHitTestVisible="True" />
+
+        <!-- Switch Pro classic cross (+) silhouette: #802D2D2D fill + light gray stroke -->
+        <Path Data="M 52,8 H 96 V 52 H 140 V 96 H 96 V 140 H 52 V 96 H 8 V 52 H 52 Z"
+              Fill="#802D2D2D"
+              Stroke="#B0C8C8C8"
+              StrokeThickness="1.8"
+              StrokeLineJoin="Round"
+              IsHitTestVisible="False" />
+
+        <!-- Active directional highlights -->
+        <Border x:Name="UpHighlight" Width="40" Height="40" VerticalAlignment="Top" Margin="0,10,0,0"
+                CornerRadius="6,6,2,2" Background="#48FFFFFF" Opacity="0" IsHitTestVisible="False" />
+        <Border x:Name="DownHighlight" Width="40" Height="40" VerticalAlignment="Bottom" Margin="0,0,0,10"
+                CornerRadius="2,2,6,6" Background="#48FFFFFF" Opacity="0" IsHitTestVisible="False" />
+        <Border x:Name="LeftHighlight" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0"
+                CornerRadius="6,2,2,6" Background="#48FFFFFF" Opacity="0" IsHitTestVisible="False" />
+        <Border x:Name="RightHighlight" Width="40" Height="40" HorizontalAlignment="Right" Margin="0,0,10,0"
+                CornerRadius="2,6,6,2" Background="#48FFFFFF" Opacity="0" IsHitTestVisible="False" />
+
+        <!-- Center pivot dimple -->
+        <Ellipse Width="22" Height="22" Fill="#551A1A1A" Stroke="#55CCCCCC" StrokeThickness="1" IsHitTestVisible="False" />
+
+        <!-- Directional glyphs -->
+        <TextBlock Text="▲" FontSize="13" Foreground="#D8EFEFEF" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,18,0,0" IsHitTestVisible="False" />
+        <TextBlock Text="▼" FontSize="13" Foreground="#D8EFEFEF" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,18" IsHitTestVisible="False" />
+        <TextBlock Text="◀" FontSize="13" Foreground="#D8EFEFEF" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="18,0,0,0" IsHitTestVisible="False" />
+        <TextBlock Text="▶" FontSize="13" Foreground="#D8EFEFEF" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,18,0" IsHitTestVisible="False" />
+    </Grid>
+</UserControl>

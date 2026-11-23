@@ -1,0 +1,11 @@
+<Application x:Class="StardewSurfacePad.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <SolidColorBrush x:Key="CharcoalFillBrush" Color="#802D2D2D" />
+        <SolidColorBrush x:Key="CharcoalDarkFillBrush" Color="#B01F1F1F" />
+        <SolidColorBrush x:Key="SwitchBorderBrush" Color="#B8C0C0C0" />
+        <SolidColorBrush x:Key="NintendoRedBrush" Color="#FFE60012" />
+    </Application.Resources>
+</Application>

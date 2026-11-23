@@ -1,0 +1,8 @@
+bin/
+obj/
+ReleaseBuild/
+.vs/
+*.user
+*.suo
+*.pdb
+*.cache
